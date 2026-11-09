@@ -13,7 +13,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Automated-Test-Error-Bug-Reporting/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Automated-Test-Error-Bug-Reporting?style=social" alt="GitHub stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Automated-Test-Error-Bug-Reporting/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Automated-Test-Error-Bug-Reporting?style=social" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Automated-Test-Error-Bug-Reporting/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Automated-Test-Error-Bug-Reporting?style=social" alt="GitHub forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Automated-Test-Error-Bug-Reporting/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -62,9 +62,9 @@ The table below covers prominent commercial SaaS platforms for automated error m
 
 ## 🛠️ Open-Source Repositories
 
-Self-hostable, developer-friendly open-source alternatives for crash analysis, stack trace logging, exception tracking, and end-to-end telemetry. Repositories are sorted descending by GitHub star count.
+Self-hostable, developer-friendly open-source alternatives for crash analysis, stack trace logging, exception tracking, and end-to-end telemetry. Repositories are sorted descending by GitHub Stars_Count.
 
-| Repository | GitHub Stars | Primary Language / Stack | Architecture & Description |
+| Repository | GitHub_Stars | Primary Language / Stack | Architecture & Description |
 | :--- | :---: | :--- | :--- |
 | **[getsentry/sentry](https://github.com/getsentry/sentry)** | [![Stars](https://img.shields.io/github/stars/getsentry/sentry?style=social&color=white)](https://github.com/getsentry/sentry/stargazers) | Python / TypeScript | The gold standard open-source developer-first error tracking and application performance monitoring (APM) engine. |
 | **[SigNoz/signoz](https://github.com/SigNoz/signoz)** | [![Stars](https://img.shields.io/github/stars/SigNoz/signoz?style=social&color=white)](https://github.com/SigNoz/signoz/stargazers) | Go / TypeScript / ClickHouse | Full-stack observability platform aggregating metrics, distributed traces, and error logs using native OpenTelemetry standards. |
