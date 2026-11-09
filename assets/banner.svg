@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Linear Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#0a0a14" />
+    </linearGradient>
+
+    <!-- Accent Gradient for Glows & Highlights -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <!-- Glowing Radial Filter/Gradients for Orbs -->
+    <radialGradient id="orbCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="orbPurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="orbAmber" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Subtle Grid Pattern -->
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.25" />
+    </pattern>
+
+    <!-- Soft Drop Shadow -->
+    <filter id="badgeShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseOrb {
+      0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.35; }
+      50% { transform: scale(1.15) translate(-15px, 10px); opacity: 0.6; }
+    }
+    @keyframes floatBug {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(3deg); }
+    }
+    @keyframes pulseRing {
+      0% { r: 6; opacity: 0.8; }
+      50% { r: 14; opacity: 0.15; }
+      100% { r: 6; opacity: 0.8; }
+    }
+    @keyframes waveDash {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 60; }
+    }
+    .orb-glow-1 { animation: pulseOrb 8s ease-in-out infinite alternate; }
+    .orb-glow-2 { animation: pulseOrb 10s ease-in-out infinite alternate-reverse; }
+    .floating-badge { animation: floatBug 5s ease-in-out infinite; }
+    .ping-circle { animation: pulseRing 3s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    .flow-line { stroke-dasharray: 6 6; animation: waveDash 4s linear infinite; }
+    .title-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 800; }
+    .body-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 500; }
+  </style>
+
+  <!-- Deep Backdrop -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" />
+
+  <!-- Animated Glowing Background Orbs (Behind content) -->
+  <g opacity="0.8">
+    <circle class="orb-glow-1" cx="200" cy="120" r="160" fill="url(#orbCyan)" />
+    <circle class="orb-glow-2" cx="1020" cy="220" r="180" fill="url(#orbPurple)" />
+    <circle class="orb-glow-1" cx="620" cy="360" r="140" fill="url(#orbAmber)" />
+  </g>
+
+  <!-- Tech Blueprint Grid -->
+  <rect width="100%" height="100%" fill="url(#gridPattern)" />
+
+  <!-- Dynamic Trace / Pulse Circuit Lines (Background) -->
+  <g opacity="0.4">
+    <path class="flow-line" d="M 80 80 Q 300 20 540 100 T 1120 70" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+    <path class="flow-line" d="M 120 350 Q 420 390 750 320 T 1100 340" fill="none" stroke="#a855f7" stroke-width="1.5" />
+    <circle cx="540" cy="100" class="ping-circle" fill="#38bdf8" />
+    <circle cx="750" cy="320" class="ping-circle" fill="#a855f7" />
+  </g>
+
+  <!-- High-Tech Pill Badges (Top & Accent) -->
+  <g class="floating-badge">
+    <rect x="80" y="42" width="220" height="32" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1" filter="url(#badgeShadow)"/>
+    <circle cx="98" cy="58" r="5" fill="#10b981" />
+    <text class="body-text" x="112" y="63" fill="#94a3b8" font-size="12" letter-spacing="1.2">AUTOMATED REPORTING</text>
+  </g>
+
+  <g class="floating-badge" style="animation-delay: -2.5s;">
+    <rect x="910" y="42" width="210" height="32" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1" filter="url(#badgeShadow)"/>
+    <circle cx="928" cy="58" r="5" fill="#38bdf8" />
+    <text class="body-text" x="942" y="63" fill="#94a3b8" font-size="12" letter-spacing="1.2">CRASH &amp; EXCEPTION AI</text>
+  </g>
+
+  <!-- Foreground Content: Main Title and Headers -->
+  <g id="foreground-content">
+    <!-- Main Title with Gradient fill -->
+    <text class="title-text" x="600" y="165" text-anchor="middle" font-size="44" fill="url(#primaryGrad)" filter="url(#badgeShadow)">
+      Awesome Automated Bug &amp; Error Reporting
+    </text>
+
+    <!-- Subtitle -->
+    <text class="body-text" x="600" y="215" text-anchor="middle" font-size="20" fill="#f8fafc" letter-spacing="0.5">
+      Curated Telemetry, Exception Tracking, Crash Reporting &amp; Test Diagnostics
+    </text>
+
+    <!-- Tagline description -->
+    <text class="body-text" x="600" y="250" text-anchor="middle" font-size="14" fill="#94a3b8" letter-spacing="0.3">
+      Real-Time Observability • Stack Trace Deobfuscation • Session Replay • Production Stability
+    </text>
+
+    <!-- Pill Feature Badges Row -->
+    <g transform="translate(240, 290)">
+      <!-- Pill 1 -->
+      <g filter="url(#badgeShadow)">
+        <rect x="0" y="0" width="135" height="38" rx="19" fill="#1e1e2f" stroke="#38bdf8" stroke-width="1.2"/>
+        <text class="body-text" x="67" y="24" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="600">⚡ Real-Time SDK</text>
+      </g>
+      <!-- Pill 2 -->
+      <g filter="url(#badgeShadow)" transform="translate(150, 0)">
+        <rect x="0" y="0" width="135" height="38" rx="19" fill="#1e1e2f" stroke="#818cf8" stroke-width="1.2"/>
+        <text class="body-text" x="67" y="24" text-anchor="middle" fill="#818cf8" font-size="13" font-weight="600">🛡️ Crash Shields</text>
+      </g>
+      <!-- Pill 3 -->
+      <g filter="url(#badgeShadow)" transform="translate(300, 0)">
+        <rect x="0" y="0" width="135" height="38" rx="19" fill="#1e1e2f" stroke="#c084fc" stroke-width="1.2"/>
+        <text class="body-text" x="67" y="24" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="600">🔍 Root Cause AI</text>
+      </g>
+      <!-- Pill 4 -->
+      <g filter="url(#badgeShadow)" transform="translate(450, 0)">
+        <rect x="0" y="0" width="135" height="38" rx="19" fill="#1e1e2f" stroke="#34d399" stroke-width="1.2"/>
+        <text class="body-text" x="67" y="24" text-anchor="middle" fill="#34d399" font-size="13" font-weight="600">📊 Benchmarked</text>
+      </g>
+      <!-- Pill 5 -->
+      <g filter="url(#badgeShadow)" transform="translate(600, 0)">
+        <rect x="0" y="0" width="120" height="38" rx="19" fill="#1e1e2f" stroke="#f472b6" stroke-width="1.2"/>
+        <text class="body-text" x="60" y="24" text-anchor="middle" fill="#f472b6" font-size="13" font-weight="600">⭐ Open Source</text>
+      </g>
+    </g>
+
+    <!-- Bottom border accent line -->
+    <rect x="150" y="380" width="900" height="2" rx="1" fill="url(#primaryGrad)" opacity="0.6" />
+  </g>
+</svg>
